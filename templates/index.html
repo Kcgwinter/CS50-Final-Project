@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--CSS Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/sidebar.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/top.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/styles.css')}}" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename= 'icons/apple-touch-icon.png')}}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename= 'icons/favicon-32x32.png')}}" />
+
+    <!-- Animate CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>K.Winter | Software Developer</title>
+</head>
+
+<body>
+    <!--Navbar -->
+    <nav class="navbar navbar-dark fixed-top navbar-expand-md headspace" id="main-nav">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a aria-label="Kevin" href="#start" target="_self" class="navbar-brand">K.Winter
+            </a>
+            <div id="navbarCollapse" class="navbar-collapse collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="#start" target="_self" class="nav-link active">Start
+                            <b>/&gt;</b></a></li>
+                    <li class="nav-item"><a href="#about" target="_self" class="nav-link">About <span>/&gt;</span></a>
+                    </li>
+                    <li class="nav-item"><a href="#work" target="_self" class="nav-link">Work <span>/&gt;</span></a>
+                    </li>
+                    <li class="nav-item"><a href="#contact" target="_self" class="nav-link">Contact
+                            <span>/&gt;</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% include 'header.html' %}
+    {% include 'about.html' %}
+    {% include 'work.html' %}
+    {% include 'contact.html' %}
+
+    <!-- Footer section -->
+
+    <!-- Website scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename= 'js/app.js')}}"></script>
+
+    <!-- Ion icons scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
